@@ -27,7 +27,9 @@ GitHub:https://github.com/sometimes1
 3，[一个手机画板（Canvas画图)](https://sometimes1.github.io/dome/%E7%94%BB%E6%9D%BF.html)
 
 	使用原生JS，借助Canvas API 和动态REM方案（flexible.js）制作的手机画板
-  
+ 
+ 
+ 
 技能介绍
 ----
 - 静态页面制作技术
@@ -43,3 +45,7 @@ GitHub:https://github.com/sometimes1
   - 了解HTTP、知道HTTP请求、响应的定义
 
 
+更多链接
+----
+[我的博客](http://www.jianshu.com/u/1a4d23eea637)
+[我的Demos](https://github.com/sometimes1/dome/tree/master)
