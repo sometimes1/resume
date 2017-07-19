@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一份简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: DFKai-SB;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .connect {
+            width: 100%;
+            background: rgb(247, 97, 96);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 800px;
+            height: 53px;
+        }
+
+        .links>li {
+            margin-right: 30px;
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+
+        .connect::after {
+            content: '';
+            position: absolute;
+            left: 51%;
+            border-width: 14px 10px;
+            top: 100%;
+            border-style: solid;
+            border-color: rgb(247, 97, 96);
+            border-bottom: none;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+        .topbar {
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(55, 71, 96);
+        }
+
+        .topbar>ul {
+            height: 125px;
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar>ul>.resume {
+            font-size: 28px;
+            padding-right: 30px;
+        }
+
+        .topbar>ul>li:hover {
+            cursor: pointer;
+        }
+
+
+        .profile {
+            height: 520px;
+            background: transparent url(//i.loli.net/2017/07/18/596d7bd5ae67b.jpg) no-repeat center;
+            position: relative;
+            background-size: cover;
+            color: white;
+        }
+
+        .profile::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(55, 71, 96, 0.8);
+        }
+
+        .profile>.datum {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .profile>.datum>h1 {
+            font-size: 60px;
+            padding-top: 90px;
+            margin-bottom: 20px;
+        }
+
+        .profile>.datum>P>span {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .profile>.datum>P>span>svg {
+            position: absolute;
+            top: 0;
+            left: -20px;
+        }
+
+        .profile>.datum>p>.city {
+            background: rgb(247, 97, 96);
+            padding: 3px 15px;
+            padding-left: 25px;
+            border-radius: 8px;
+        }
+
+        .profile>.datum>p>.city>svg {
+            position: absolute;
+            top: 20%;
+            left: 5px;
+        }
+
+        .profile>.datum>p>.city>.icon {
+            fill: white;
+        }
+
+        .profile>.datum>p>span>.icon {
+            fill: rgb(247, 97, 96);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+        <div class="connect">
+            <ul class="links">
+                <li>
+                    Connect
+                </li>
+                <li>
+                    <a href="191979737@qq.com" title="我的邮箱" target="_black">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icon-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/sometimes1" title="github" target="_black">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.jianshu.com/u/1a4d23eea637" title="我的博客" target="_black">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-book"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="topbar">
+            <ul>
+                <li class="resume">Resume</li>
+                <li>个人介绍</li>
+                <li>项目介绍</li>
+                <li>技能介绍</li>
+                <li>联系方式</li>
+            </ul>
+        </div>
+        <div class="profile">
+            <div class="datum">
+                <h1>彭玉芳</h1>
+                <p>
+                    <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-personalmanagement"></use>
+            </svg>
+            前端工程师</span>
+                    <span class="city">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-location2"></use>
+            </svg>
+            上海</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="//at.alicdn.com/t/font_j3ahtjkc55e6zuxr.js"></script>
+</body>
+
+</html>
