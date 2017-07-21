@@ -7,205 +7,283 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>第一份简历</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: DFKai-SB;
-        }
+       *{
+  font-family: serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+ul,ol{
+  list-style:none;
+}
+.resume{
+  width:100%;
+  display:flex;
+}
+/*左边部分*/
+.links{
+  width: 440px;
+  min-height: 636px;
+  background:white;
+  color:black;
+  position: relative;
+}
+.links .log{
+  margin:45px 45px;
+}
+.links .log img{
+  width: 100px;
+  height: 95px;
+}
+.link{
+  margin-left:45px;
+  margin-top:300px;
+}
+.link li{
+  padding-bottom:8px;
+}
 
-        ul {
-            list-style: none;
-        }
+.icon-case {
+  width: 100px;
+  display:flex;
+  margin-left:45px;
+  justify-content:space-between;
+  margin-top:20px;
+}
+.icon{
+  width: 1.5em;
+  height: 1.5em;
+}
+.icon-case > li> a > .icon:hover{
+  transform:scale(1.5);
+}
 
-        .connect {
-            width: 100%;
-            background: rgb(247, 97, 96);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
+/*右边部分*/
+.picture img{
+  width: 400px;
+  height: 550px;
+  position: absolute;
+  top:7%;
+  left:70%;
+  box-shadow: 5px 5px 70px 5px #ddd;
+}
+.picture:after{
+  content:'';
+  width: 400px;
+  height: 550px;
+  position: absolute;
+  top:7%;
+  left:70%;
+  background:rgba(55, 71, 96, 0.5);
+}
 
-        .links {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 800px;
-            height: 53px;
-        }
-
-        .links>li {
-            margin-right: 30px;
-        }
-
-        .icon {
-            width: 1em;
-            height: 1em;
-        }
-
-        .connect::after {
-            content: '';
-            position: absolute;
-            left: 51%;
-            border-width: 14px 10px;
-            top: 100%;
-            border-style: solid;
-            border-color: rgb(247, 97, 96);
-            border-bottom: none;
-            border-left-color: transparent;
-            border-right-color: transparent;
-        }
-
-        .topbar {
-            width: 100%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgb(55, 71, 96);
-        }
-
-        .topbar>ul {
-            height: 125px;
-            width: 800px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .topbar>ul>.resume {
-            font-size: 28px;
-            padding-right: 30px;
-        }
-
-        .topbar>ul>li:hover {
-            cursor: pointer;
-        }
+.content{
+  min-width:930px;
+  background:#000;
+  color:white;
+  display:flex;
+}
+.before{
+  width: 270px;
+}
+.tabs{
+  margin:0 auto;
+  position: relative;
+}
+.info{
+  width: 500px;
+  margin-top:45px;
+  display:flex;
+  justify-content:space-around;
+}
 
 
-        .profile {
-            height: 520px;
-            background: transparent url(//i.loli.net/2017/07/18/596d7bd5ae67b.jpg) no-repeat center;
-            position: relative;
-            background-size: cover;
-            color: white;
-        }
+/*个人信息*/
+.personage{
+  position: relative;
+  z-index:1;
+  text-align:center;
+}
+.personage > h1{
+  font-size:50px;
+  padding-top:90px;
+  margin-bottom:20px;
+}
+.personage >P > span{
+  margin:0 20px;
+  position: relative;
+}
+.personage >P>span>svg{
+  position: absolute;
+  top:0;
+  left:-20px;
+}
+.personage > p > .city{
+  background:rgb(247,97,96);
+  padding: 3px 15px;
+  padding-left:25px;
+  border-radius: 8px;
+}
+.synopsis{
+  margin-top:35px;
+}
+.personage> p > .city > svg{
+  position: absolute;
+  top:20%;
+  left:5px;
+}
+.personage > p > .city > .icon{
+  fill:white;
+  width: 1em;
+  height: 1em;
+}
+.personage > p > span >.icon {
+  fill: rgb(247,97,96);
+  width: 1em;
+  height: 1em;
+}
+.personage{
+  display:;
+}
 
-        .profile::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(55, 71, 96, 0.8);
-        }
 
-        .profile>.datum {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
+/*项目介绍*/
 
-        .profile>.datum>h1 {
-            font-size: 60px;
-            padding-top: 90px;
-            margin-bottom: 20px;
-        }
-
-        .profile>.datum>P>span {
-            margin: 0 20px;
-            position: relative;
-        }
-
-        .profile>.datum>P>span>svg {
-            position: absolute;
-            top: 0;
-            left: -20px;
-        }
-
-        .profile>.datum>p>.city {
-            background: rgb(247, 97, 96);
-            padding: 3px 15px;
-            padding-left: 25px;
-            border-radius: 8px;
-        }
-
-        .profile>.datum>p>.city>svg {
-            position: absolute;
-            top: 20%;
-            left: 5px;
-        }
-
-        .profile>.datum>p>.city>.icon {
-            fill: white;
-        }
-
-        .profile>.datum>p>span>.icon {
-            fill: rgb(247, 97, 96);
-        }
+.projects{
+  display:none;
+}
+/*技能介绍*/
+.skills{
+  display:none;
+}
     </style>
 </head>
 
 <body>
-    <div class="resume">
-        <div class="connect">
-            <ul class="links">
-                <li>
-                    Connect
-                </li>
-                <li>
-                    <a href="191979737@qq.com" title="我的邮箱" target="_black">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-icon-message"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/sometimes1" title="github" target="_black">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.jianshu.com/u/1a4d23eea637" title="我的博客" target="_black">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-book"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="topbar">
-            <ul>
-                <li class="resume">Resume</li>
-                <li>个人介绍</li>
-                <li>项目介绍</li>
-                <li>技能介绍</li>
-                <li>联系方式</li>
-            </ul>
-        </div>
-        <div class="profile">
-            <div class="datum">
-                <h1>彭玉芳</h1>
-                <p>
-                    <span>
+  <div class="resume">
+    <div class="links">
+      <div class="log">
+        <img src="//i.loli.net/2017/07/21/597201cccd736.png" alt="log">
+      </div>
+      <ul class="link">
+        <li>邮箱</li>
+        <li>pengyufang520@gmail.com</li>
+        <li>电话</li>
+        <li>187xxxx7872</li>
+      </ul>
+      <ul class="icon-case">
+        <li>
+          <a href="https://github.com/sometimes1" title="github" target="_black">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.jianshu.com/u/1a4d23eea637" title="我的博客" target="_black">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-book"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="picture">
+        <img src="https://i.loli.net/2017/07/21/59720c5ff34b3.jpg" alt="#">
+      </div>
+    </div>
+    <div class="content">
+      <div class="before"></div>
+      <div class="tabs">
+        <ul class="info">
+          <li>个人信息</li>
+          <li>项目介绍</li>
+          <li>技能介绍</li>
+          <li>更多链接</li>
+        </ul>
+        <div class="personage">
+          <h1>彭玉芳</h1>
+          <p>
+            <span>
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-personalmanagement"></use>
             </svg>
             前端工程师</span>
-                    <span class="city">
+            <span class="city">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-location2"></use>
             </svg>
             上海</span>
-                </p>
-            </div>
+          </p>
+          <p class="synopsis">1994年生、目前只是一个弱小的前端爱好者</p>
         </div>
+        <div class="projects">
+          <ol>
+            <li>
+              <a class="image-wrapper" href="#">
+                <img src="" alt="">
+                <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
+              </a>
+              <h2>恐龙页面（最简单的页面）</h2>
+            </li>
+            <li>
+              <a class="image-wrapper" href="#">
+                <img src="" alt="">
+                <p>使用 jQuery 制作的苹果风格轮播</p>
+              </a>
+              <h2>一个苹果风格的轮播组件（轮播）</h2>
+            </li>
+            <li>
+              <a class="image-wrapper" href="#"><img src="" alt="">
+                <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
+              </a>
+              <h2>一个手机画板（Canvas 画图）</h2>
+            </li>
+            <li>
+              <a class="image-wrapper" href="#">
+                <img src="" alt="">
+                <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
+              </a>
+              <h2>英雄联盟官网仿制</h2>
+            </li>
+          </ol>
+        </div>
+        <div class="skills">
+          <h2>我的技能</h2>
+          <ul>
+            <li>
+              <h3>静态页面制作技术</h3>
+              <ul>
+                <li>像素级还原设计稿，可以实现响应式以适应手机屏幕。</li>
+                <li>CSS 3 动画、Flex 布局、CSS</li>
+              </ul>
+            </li>
+            <li>
+              <h3>移动端页面</h3>
+              <ul>
+                <li>使用动态 REM 适配所有手机屏幕</li>
+                <li>手机端页面调试</li>
+              </ul>
+            </li>
+            <li>
+              <h3>熟练使用 jQuery</h3>
+              <ul>
+                <li>了解 jQuery 常见 API</li>
+                <li>编写 jQuery 插件</li>
+              </ul>
+            </li>
+            <li>
+              <h3>与后端配合开发</h3>
+              <ul>
+                <li>
+                  了解 HTTP 协议，知道 HTTP 请求、响应的定义
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+
     <script src="//at.alicdn.com/t/font_j3ahtjkc55e6zuxr.js"></script>
 </body>
 
