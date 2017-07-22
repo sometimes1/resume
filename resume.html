@@ -515,14 +515,14 @@
                                 <h2>一个苹果风格的轮播组件（轮播）</h2>
                             </li>
                             <li>
-                                <a class="image-wrapper" href="//sometimes1.github.io/dome/%E7%94%BB%E6%9D%BF.html" target="_black">
+                                <a class="image-wrapper" href="//sometimes1.github.io/demo/%E7%94%BB%E6%9D%BF.html" target="_black">
                   <img src="//i.loli.net/2017/07/22/5972da5337c52.png" alt="画板">
                   <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
                 </a>
                                 <h2>一个手机画板（Canvas 画图）</h2>
                             </li>
                             <li>
-                                <a class="image-wrapper" href="https://sometimes1.github.io/dome/LOL%E9%A1%B5%E9%9D%A2.html" target="_black">
+                                <a class="image-wrapper" href="https://sometimes1.github.io/demo/LOL%E9%A1%B5%E9%9D%A2.html" target="_black">
                   <img src="//i.loli.net/2017/07/22/5972dac23b55a.png" alt="英雄联盟官网">
                   <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
                 </a>
@@ -581,7 +581,7 @@
         <script src="//at.alicdn.com/t/font_j3ahtjkc55e6zuxr.js"></script>
         <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>
-            $('.tabs').on('mousedown', 'li', function (e) {
+            $('.tabs').on('mousedown', ' .info li', function (e) {
                 let $li = $(e.currentTarget);
                 let index = $li.index();
                 $li.addClass('active').siblings('.active').removeClass('active');
