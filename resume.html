@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第一份简历</title>
+    <title>简历</title>
     <style>
-       *{
-  font-family: serif;
+        *{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -24,8 +22,9 @@ ul,ol{
 .links{
   width: 440px;
   min-height: 636px;
-  background:white;
-  color:black;
+  font-weight: bold;
+  background:black;
+  color:white;
   position: relative;
 }
 .links .log{
@@ -53,34 +52,27 @@ ul,ol{
 .icon{
   width: 1.5em;
   height: 1.5em;
+  fill:rgb(199,2,32);
 }
 .icon-case > li> a > .icon:hover{
   transform:scale(1.5);
 }
 
-/*右边部分*/
+/*旋转*/
 .picture img{
-  width: 400px;
-  height: 550px;
+  width: 350px;
+  height: 480px;
+  border-radius:50%;
   position: absolute;
   top:7%;
-  left:70%;
-  box-shadow: 5px 5px 70px 5px #ddd;
+  left:65%;
+  box-shadow: 5px 5px 70px 5px #000;
 }
-.picture:after{
-  content:'';
-  width: 400px;
-  height: 550px;
-  position: absolute;
-  top:7%;
-  left:70%;
-  background:rgba(55, 71, 96, 0.5);
-}
-
+/*右边部分*/
 .content{
   min-width:930px;
-  background:#000;
-  color:white;
+  background:white;
+  color:black;
   display:flex;
 }
 .before{
@@ -90,18 +82,38 @@ ul,ol{
   margin:0 auto;
   position: relative;
 }
+.info-top{
+  width: 100%;
+}
 .info{
-  width: 500px;
+  width: 640px;
   margin-top:45px;
   display:flex;
   justify-content:space-around;
 }
 
+.info li{
+  background:black;
+  color:white;
+  padding:5px 10px;
+  cursor:pointer;
+  border-radius:8%;
+}
+.info li:hover{
+  background:rgb(199,2,32);
+  color:black;
+  border-radius:8%;
+}
+.info .active{
+  background:rgb(199,2,32);
+  color:black;
+}
 
 /*个人信息*/
+.tabs .tabs-content .active{
+  display:block;
+}
 .personage{
-  position: relative;
-  z-index:1;
   text-align:center;
 }
 .personage > h1{
@@ -115,11 +127,11 @@ ul,ol{
 }
 .personage >P>span>svg{
   position: absolute;
-  top:0;
+  top:4px;
   left:-20px;
 }
 .personage > p > .city{
-  background:rgb(247,97,96);
+  background:rgb(199,2,32);
   padding: 3px 15px;
   padding-left:25px;
   border-radius: 8px;
@@ -138,12 +150,12 @@ ul,ol{
   height: 1em;
 }
 .personage > p > span >.icon {
-  fill: rgb(247,97,96);
+  fill: rgb(199,2,32);
   width: 1em;
   height: 1em;
 }
 .personage{
-  display:;
+  display:none;
 }
 
 
@@ -152,18 +164,113 @@ ul,ol{
 .projects{
   display:none;
 }
+.projects{
+  text-align: center;
+}
+.projects ol{
+  padding-top:70px;
+  max-width: 640px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+.projects ol li{
+  margin-bottom:8px;
+  border-radius:4%;
+}
+.projects ol img{
+  width: 300px;
+  height: 200px;
+  border:1px solid #ddd;
+  border-radius:4%;
+}
+.projects h2{
+  font-size:18px;
+  padding-top:5px;
+}
+.projects p{
+  display:none;
+  color:white;
+}
+.projects a{
+  position: relative;
+}
+.projects a:hover > p{
+  display:block;
+  width: 300px;
+  height: 200px;
+  border-radius:4%;
+  background: rgba(255, 255, 255, 0.5);
+  color:black;
+  position: absolute;
+  top:-184px;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 /*技能介绍*/
 .skills{
   display:none;
 }
+.skill{
+  margin-top:70px;
+  max-width: 640px;
+  display:flex;
+  justify-content:center;
+}
+.skills li{
+  position: relative;
+}
+.skills h3{
+  font-size:18px;
+  line-height:60px;
+  position: relative;
+}
+.skills img{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top:3px;
+  left:-18%;
+  background:white;
+  z-index:1;
+}
+.skills h3::before{
+  content:'';
+  color:#ddd;
+  display:inline-block;
+  height: 80px;
+  border:1px solid;
+  background:#ddd;
+  position: absolute;
+  top:40%;
+  left:-12%;
+}
+.skills li:last-child h3::before{
+  display:none;
+}
+
+.more{
+  display:none;
+}
+.more{
+  text-align: center;
+  margin-top:70px;
+  font-size:30px;
+}
+.more a{
+  color:black;
+}
+
+
     </style>
 </head>
-
 <body>
   <div class="resume">
     <div class="links">
       <div class="log">
-        <img src="//i.loli.net/2017/07/21/597201cccd736.png" alt="log">
+        <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="log">
       </div>
       <ul class="link">
         <li>邮箱</li>
@@ -173,14 +280,14 @@ ul,ol{
       </ul>
       <ul class="icon-case">
         <li>
-          <a href="https://github.com/sometimes1" title="github" target="_black">
+          <a href="//github.com/sometimes1" title="github" target="_black">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-github"></use>
             </svg>
           </a>
         </li>
         <li>
-          <a href="https://www.jianshu.com/u/1a4d23eea637" title="我的博客" target="_black">
+          <a href="//www.jianshu.com/u/1a4d23eea637" title="我的博客" target="_black">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-book"></use>
             </svg>
@@ -188,103 +295,126 @@ ul,ol{
         </li>
       </ul>
       <div class="picture">
-        <img src="https://i.loli.net/2017/07/21/59720c5ff34b3.jpg" alt="#">
+        <img src="//i.loli.net/2017/07/22/5972b91b6d20c.jpg" alt="#">
       </div>
     </div>
     <div class="content">
       <div class="before"></div>
       <div class="tabs">
-        <ul class="info">
-          <li>个人信息</li>
-          <li>项目介绍</li>
-          <li>技能介绍</li>
-          <li>更多链接</li>
-        </ul>
-        <div class="personage">
-          <h1>彭玉芳</h1>
-          <p>
-            <span>
+        <div class="info-top">
+          <ul class="info">
+            <li class="active">个人信息</li>
+            <li>项目介绍</li>
+            <li>技能介绍</li>
+            <li>更多链接</li>
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <section class="personage active">
+            <h1>彭玉芳</h1>
+            <p>
+              <span>
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-personalmanagement"></use>
             </svg>
             前端工程师</span>
-            <span class="city">
+              <span class="city">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-location2"></use>
             </svg>
             上海</span>
-          </p>
-          <p class="synopsis">1994年生、目前只是一个弱小的前端爱好者</p>
-        </div>
-        <div class="projects">
-          <ol>
-            <li>
-              <a class="image-wrapper" href="#">
-                <img src="" alt="">
-                <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
-              </a>
-              <h2>恐龙页面（最简单的页面）</h2>
-            </li>
-            <li>
-              <a class="image-wrapper" href="#">
-                <img src="" alt="">
-                <p>使用 jQuery 制作的苹果风格轮播</p>
-              </a>
-              <h2>一个苹果风格的轮播组件（轮播）</h2>
-            </li>
-            <li>
-              <a class="image-wrapper" href="#"><img src="" alt="">
-                <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
-              </a>
-              <h2>一个手机画板（Canvas 画图）</h2>
-            </li>
-            <li>
-              <a class="image-wrapper" href="#">
-                <img src="" alt="">
-                <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
-              </a>
-              <h2>英雄联盟官网仿制</h2>
-            </li>
-          </ol>
-        </div>
-        <div class="skills">
-          <h2>我的技能</h2>
-          <ul>
-            <li>
-              <h3>静态页面制作技术</h3>
-              <ul>
-                <li>像素级还原设计稿，可以实现响应式以适应手机屏幕。</li>
-                <li>CSS 3 动画、Flex 布局、CSS</li>
-              </ul>
-            </li>
-            <li>
-              <h3>移动端页面</h3>
-              <ul>
-                <li>使用动态 REM 适配所有手机屏幕</li>
-                <li>手机端页面调试</li>
-              </ul>
-            </li>
-            <li>
-              <h3>熟练使用 jQuery</h3>
-              <ul>
-                <li>了解 jQuery 常见 API</li>
-                <li>编写 jQuery 插件</li>
-              </ul>
-            </li>
-            <li>
-              <h3>与后端配合开发</h3>
+            </p>
+            <p class="synopsis">1994年生、目前只是一个弱小的前端爱好者</p>
+          </section>
+          <section class="projects">
+            <ol>
+              <li>
+                <a class="image-wrapper" href="//sometimes1.github.io/-13/恐龙页面.html" target="_black">
+                  <img src="//i.loli.net/2017/07/22/5972d9653e937.png" alt="恐龙页面">
+                  <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
+                </a>
+                <h2>恐龙页面（最简单的页面）</h2>
+              </li>
+              <li>
+                <a class="image-wrapper" href="//sometimes1.github.io/-13/轮播组件.html" target="_black">
+                  <img src="//i.loli.net/2017/07/22/5972da08066e3.png" alt="轮播">
+                  <p>使用 jQuery 制作的苹果风格轮播</p>
+                </a>
+                <h2>一个苹果风格的轮播组件（轮播）</h2>
+              </li>
+              <li>
+                <a class="image-wrapper" href="//sometimes1.github.io/dome/%E7%94%BB%E6%9D%BF.html" target="_black">
+                  <img src="//i.loli.net/2017/07/22/5972da5337c52.png" alt="画板">
+                  <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
+                </a>
+                <h2>一个手机画板（Canvas 画图）</h2>
+              </li>
+              <li>
+                <a class="image-wrapper" href="https://sometimes1.github.io/dome/LOL%E9%A1%B5%E9%9D%A2.html" target="_black">
+                  <img src="//i.loli.net/2017/07/22/5972dac23b55a.png" alt="英雄联盟官网">
+                  <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
+                </a>
+                <h2>英雄联盟官网仿制</h2>
+              </li>
+            </ol>
+          </section>
+          <section class="skills">
+            <div class="skill">
               <ul>
                 <li>
-                  了解 HTTP 协议，知道 HTTP 请求、响应的定义
+                  <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="">
+                  <h3>
+                  静态页面制作技术
+                </h3>
+                  <ul>
+                    <li>像素级还原设计稿，可以实现响应式以适应手机屏幕。</li>
+                    <li>CSS 3 动画、Flex 布局、CSS</li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="">
+                  <h3>移动端页面</h3>
+                  <ul>
+                    <li>使用动态 REM 适配所有手机屏幕</li>
+                    <li>手机端页面调试</li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="">
+                  <h3>熟练使用 jQuery</h3>
+                  <ul>
+                    <li>了解 jQuery 常见 API</li>
+                    <li>编写 jQuery 插件</li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="">
+                  <h3>与后端配合开发</h3>
+                  <ul>
+                    <li>
+                      了解 HTTP 协议，知道 HTTP 请求、响应的定义
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </section>
+          <section class="more">
+            <a href="//github.com/sometimes1/dome">我的Demos</a>
         </div>
+        </section>
       </div>
     </div>
 
     <script src="//at.alicdn.com/t/font_j3ahtjkc55e6zuxr.js"></script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('.tabs').on('mousedown','li',function(e){
+  let $li=$(e.currentTarget);
+  let index = $li.index();
+  $li.addClass('active').siblings('.active').removeClass('active');
+$('.tabs-content > section').eq(index).addClass('active').siblings('.active').removeClass('active');
+});
+    </script>
 </body>
-
 </html>
