@@ -18,24 +18,36 @@
             list-style: none;
         }
 
-        body{
-            width:100%;
-            height:100%;
-            display:flex;
-            justify-content:center;
-            align-items:center;  
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent url(//i.loli.net/2017/07/18/596d7bd5ae67b.jpg) no-repeat center;
+            background-size: cover;
         }
-        .resume{
-            min-width:1340px;
+
+        .body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(55, 71, 96, 0.8);
+        }
+
+        .resume {
+            min-width: 1340px;
             min-height: 640px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            display: flex;
+            justify-content: center;
         }
         /*左边部分*/
 
         .links {
-            width: 440px;
+            width: 400px;
             min-height: 640px;
             font-weight: bold;
             background: black;
@@ -93,7 +105,7 @@
 
         .content {
             min-width: 930px;
-            min-height:640px;
+            min-height: 640px;
             background: white;
             color: black;
             display: flex;
@@ -378,6 +390,9 @@
             上海</span>
                         </p>
                         <p class="synopsis">1994年生、目前只是一个弱小的前端爱好者</p>
+                        <p>
+
+                        </p>
                     </section>
                     <section class="projects">
                         <ol>
