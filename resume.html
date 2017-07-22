@@ -47,13 +47,116 @@
             position: relative;
         }
 
-        .links .log {
-            margin: 45px 45px;
+        .world {
+            margin-top: 80px;
+            margin-left: 80px;
+            background: transparent;
+            perspective: 200px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
 
-        .links .log img {
+        .cube {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
             width: 100px;
-            height: 95px;
+            height: 100px;
+            position: relative;
+            animation: rotator 4.5s linear infinite;
+            outline: 0;
+        }
+
+        .cube * {
+            background: #000;
+            box-shadow: 0 0 6px currentColor;
+            transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+
+        .cube:hover * {
+            background: currentColor;
+            box-shadow: 0 0 40px currentColor;
+        }
+
+        .cube .cube__front {
+            color: deeppink;
+            transform: translateZ(50px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cube .cube__right {
+            color: lightcoral;
+            transform: rotateY(90deg) translateZ(50px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cube .cube__left {
+            color: skyblue;
+            transform: rotateY(270deg) translateZ(50px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cube .cube__back {
+            color: seagreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+        .cube .cube__top {
+            color: mediumseagreen;
+            transform: rotateX(90deg) translateZ(50px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cube .cube__bottom {
+            color: dodgerblue;
+            transform: rotateX(270deg) translateZ(50px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @-webkit-keyframes rotator {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        @keyframes rotator {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
         }
 
         .link {
@@ -82,7 +185,7 @@
         .icon-case>li>a>.icon:hover {
             transform: scale(1.5);
         }
-        /*旋转*/
+        /*图片*/
 
         .picture img {
             width: 350px;
@@ -328,8 +431,15 @@
 <body>
     <div class="resume">
         <div class="links">
-            <div class="log">
-                <img src="//i.loli.net/2017/07/22/5972d6882719e.png" alt="log">
+            <div class="world">
+                <div class="cube" tabindex="0">
+                    <div class="cube__front"></div>
+                    <div class="cube__back"></div>
+                    <div class="cube__left"></div>
+                    <div class="cube__right"></div>
+                    <div class="cube__top"></div>
+                    <div class="cube__bottom"></div>
+                </div>
             </div>
             <ul class="link">
                 <li>邮箱</li>
@@ -470,14 +580,6 @@
 
         <script src="//at.alicdn.com/t/font_j3ahtjkc55e6zuxr.js"></script>
         <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script>
-            $('.tabs').on('mousedown', 'li', function (e) {
-                let $li = $(e.currentTarget);
-                let index = $li.index();
-                $li.addClass('active').siblings('.active').removeClass('active');
-                $('.tabs-content > section').eq(index).addClass('active').siblings('.active').removeClass('active');
-            });
-        </script>
 </body>
 
 </html>
